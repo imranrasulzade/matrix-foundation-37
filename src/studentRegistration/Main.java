@@ -13,7 +13,10 @@ public class Main {
             int menu = Utility.requireNumber("""
                 1. Register
                 2. Show all
-                3. Exit
+                3. Search
+                4. Delete
+                5. Partial Update
+                6. Exit
                 """);
 
             StudentService service = new StudentService();
@@ -27,6 +30,18 @@ public class Main {
                     break;
                 }
                 case 3: {
+                    service.search();
+                    break;
+                }
+                case 4: {
+                    service.delete();
+                    break;
+                }
+                case 5: {
+                    service.update();
+                    break;
+                }
+                case 6: {
                     running = false;
                     break;
                 }
